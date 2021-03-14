@@ -45,7 +45,7 @@ const SecondStep = ({
             label='Date of birth'
             name='date'
             type='date'
-            defaultValue={date || "1999-12-31"}
+            defaultValue={date || new Date()}
             onChange={handleChange}
             margin='normal'
             required
