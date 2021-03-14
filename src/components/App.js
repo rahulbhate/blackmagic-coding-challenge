@@ -43,17 +43,19 @@ const App = ({ profile, ...props }) => {
   return (
     <div className='App'>
       <CssBaseline />
-      <AppBar
-        position='static'
-        className={classes.appBar}
-        style={{ backgroundColor: "#f1651f" }}
-      >
-        <Toolbar>
-          <Typography variant='h6' color='inherit' noWrap>
-            Blackmagic Design
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <a style={{ textDecoration: "none" }} href='/'>
+        <AppBar
+          position='static'
+          className={classes.appBar}
+          style={{ backgroundColor: "#f1651f" }}
+        >
+          <Toolbar>
+            <Typography variant='h6' color='inherit' noWrap>
+              Blackmagic Design
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </a>
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <StepForm />

@@ -127,7 +127,12 @@ const StepForm = () => {
     });
   };
   const handleFile = e => {
-    let files = e.target.files;
+    const { name, value } = e.target;
+    // Set values
+    setFormValues(prev => ({
+      ...prev,
+      [name]: value
+    }));
     const data = new FormData();
     data.append("myFile", e.target.files[0]);
     axios

@@ -41,10 +41,7 @@ const ThirdStep = ({
               rowsMin={5}
               margin='normal'
               autoComplete='off'
-              fullWidth
               onChange={handleChange}
-              error={!!formErrors.address}
-              helperText={formErrors.address}
               label='Address'
               required
               name='address'
@@ -75,7 +72,7 @@ const ThirdStep = ({
             </TextField>
           </FormControl>
         </Grid>
-        <Grid item xs={12} fullWidth>
+        <Grid item xs={12}>
           <FormControl component='fieldset'>
             <FormLabel component='legend'>Gender</FormLabel>
             <RadioGroup
@@ -101,20 +98,15 @@ const ThirdStep = ({
 
         <Grid item xs={12}>
           <FormControl component='fieldset' fullWidth margin='normal'>
-            <FormLabel component='legend'>Please Upload your file.</FormLabel>
+            <FormLabel component='legend'>
+              Please Upload your file.(*jpg,*jpeg,*png,*pdf)
+            </FormLabel>
             <TextField
               fullWidth
               margin='normal'
               type='file'
               name='uploadFile'
               value={uploadFile}
-              onChange={handleChange}
-            />
-            <TextField
-              fullWidth
-              margin='normal'
-              type='file'
-              name='file'
               onChange={handleFile}
             />
           </FormControl>

@@ -32,7 +32,7 @@ const Confirm = ({ handleNext, handleBack, values, ...props }) => {
 
     // Update the formData object
     formData.append("myFile", values.uploadFile);
-    console.log(values.uploadFile + values.uploadFile.name);
+
     // Show last compinent or success message
     fetch("http://localhost:3001/profile/", {
       method: "POST", // POST for create, PUT to update when id already exists.
